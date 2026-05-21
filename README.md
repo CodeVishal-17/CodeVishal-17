@@ -50,8 +50,6 @@ I’m passionate about:
 ### 🔹 Fusion AI
 AI-powered project focused on improving functionality and user experience using intelligent systems.
 
-
-
 ---
 
 ## 📊 GitHub Stats
