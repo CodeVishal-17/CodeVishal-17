@@ -1,16 +1,76 @@
-## Hi there 👋
+# Hi 👋, I'm Vishal Goyal
 
-<!--
-**CodeVishal-17/CodeVishal-17** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🚀 Engineering Student | AI/ML Enthusiast | Open Source Learner
 
-Here are some ideas to get you started:
+I’m passionate about:
+- Artificial Intelligence & Machine Learning
+- Open Source Contributions
+- Python Development
+- Building Real World Projects
+- UI/UX + AI Integration
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🌱 Currently Learning
+- Python Development
+- AI & Machine Learning
+- Git & GitHub
+- Open Source Contribution
+- Data Structures & Algorithms
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+- Python
+- JavaScript
+- HTML
+- CSS
+
+### Tools & Technologies
+- Git
+- GitHub
+- VS Code
+- PyCharm
+- Linux
+- React (Learning)
+
+---
+
+## 📌 Current Goals
+- Become job-ready in AI/ML
+- Contribute to Open Source regularly
+- Build impactful AI projects
+
+---
+
+## 🚀 Projects
+
+### 🔹 Fusion AI
+AI-powered project focused on improving functionality and user experience using intelligent systems.
+
+### 🔹 E-Parakh AI Integration
+Worked on improving UI/UX and integrating AI chatbot features into the student and faculty portal.
+
+---
+
+## 📊 GitHub Stats
+
+![Vishal's GitHub stats](https://github-readme-stats.vercel.app/api?username=CodeVishal-17&show_icons=true)
+
+---
+
+## 🔥 Streak Stats
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=CodeVishal-17)
+
+---
+
+## 📫 Connect With Me
+- GitHub: https://github.com/CodeVishal-17
+- Email: vishal.goyal7711@gmail.com
+
+---
+
+⭐ “Consistency beats talent when talent doesn’t stay consistent.”
