@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="860" alt="Vishal — AI / ML engineer. Machine learning, LLM agents and RAG systems, AI infrastructure, open source. Python, PyTorch, FastAPI, PostgreSQL, Docker."/>
+<img src="./assets/header.svg" width="860" alt="Vishal — AI / ML engineer. Machine learning, LLM agents and RAG systems, AI infrastructure, open source."/>
 
 <a href="https://github.com/CodeVishal-17"><b>GitHub</b></a> &nbsp;·&nbsp;
 <a href="https://www.linkedin.com/in/vishal-goyal-906837303/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
@@ -13,12 +13,6 @@
 I build AI systems and the engineering underneath them — machine learning, LLM agents, and the infrastructure that keeps both honest.
 
 Early in my career, and I'd rather say that plainly than pad it. No job titles yet — just a habit of building the thing instead of reading about it.
-
-<div align="center">
-
-<img src="./assets/neural.svg" width="860" alt="An animated neural network: signals pulse from the input layer through two hidden layers to the output, lighting each node as they arrive."/>
-
-</div>
 
 ## Currently
 
@@ -43,17 +37,15 @@ Where the work happens — listed by ecosystem, not by counters. The graph above
 | [Django](https://github.com/django/django) | The Python web framework for perfectionists |
 | [Google etils](https://github.com/google/etils) | Shared Python tooling used across Google |
 
-## Axon — knowledge infrastructure that tries to stay true
+## Building
 
-<img src="./assets/pipeline.svg" width="860" alt="Axon pipeline: ingest repos and docs, extract atomic claims, map into postgres with pgvector, detect drift when a source has changed, maintain truth continuously."/>
+**Axon** — knowledge infrastructure that tries to stay true. Most internal AI tools are a chat box bolted onto a vector store: the moment the code moves, they answer confidently and wrongly, and nothing in the system knows it has gone stale. Axon models knowledge as atomic, attributable claims instead of loose embeddings, then continuously checks those claims against their sources. Drift detection flags knowledge whose source changed underneath it.
 
-Most internal AI tools are a chat box bolted onto a vector store. The moment the code moves, they answer confidently and wrongly — and nothing in the system knows it has gone stale.
-
-Axon models knowledge as **atomic, attributable claims** instead of loose embeddings, then continuously checks those claims against the sources they came from. Drift detection flags knowledge whose source changed underneath it, rather than serving a stale answer.
+`ingest → extract claims → map → detect drift → maintain truth`
 
 `Python` `FastAPI` `PostgreSQL` `pgvector` `Next.js` `TypeScript` — **Active**. A concept under development, not a released product.
 
-### Also built
+**Also built**
 
 - **Email Agent Environment** — email as an explicit task / state / action environment, so every step of an agent's reasoning is inspectable instead of one long prompt and a hope. `Experimental`
 - **Resource Management System** — academic material lives across a dozen group chats; this puts it behind one searchable schema. `Built`
