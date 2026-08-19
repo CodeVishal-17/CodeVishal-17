@@ -26,19 +26,44 @@ anyway.
 
 ## Motion
 
-It loops, because a one-shot animation means most visitors arrive to a still
-image.
+The card boots, then goes live. Two phases in one asset, so the loading
+sequence costs no extra height.
 
-- A chrome sweep crosses the wordmark every 4.5s (a gradient rect clipped to
-  the text itself, so it survives any font substitution).
-- Four role lines cycle on a 13s rotation, 3.25s apart.
-- A signal wave propagates left → right through the network — 36 edges, node
-  cores firing as it lands. 3s cycle, 0.55s per layer.
+**Phase 1 — boot (0 to 2.5s, plays once)**
+
+`$ ./init-profile`, a progress bar filling left to right, a percentage
+counter, and three status lines: `initializing` → `loading modules` →
+`ready`.
+
+The bar fills **linearly**, and each percentage label is the fill value at
+the *midpoint* of the window it is on screen for. Easing the bar, or
+labelling each window's start, leaves the number visibly trailing the bar.
+
+There is no scripting in the SVG, so the counter is six stacked `<text>`
+elements sharing one keyframe:
+
+```css
+@keyframes hold { 0%,100% { opacity: 1 } }
+```
+
+with `opacity: 0` as the base and **no fill mode** — each label is invisible
+during its delay, opaque for its duration, and invisible again after. Stagger
+the delays and it counts.
+
+**Phase 2 — live (2.5s onward, loops forever)**
+
+The boot group cross-fades out while the content group fades in. Everything
+inside carries a `+2.5s` delay so nothing starts under the loading screen:
+
+- a chrome sweep across the wordmark every 4.5s (a gradient rect clipped to
+  the text itself, so it survives any font substitution)
+- four role lines cycling on a 13s rotation, 3.25s apart
+- a signal wave through the network — 36 edges, node cores firing as it
+  lands, 3s cycle, 0.55s per layer
 
 Constraints: no strobing, nothing faster than a 3s cycle, accent reserved for
-one idea. Entrance animations use `animation-fill-mode: backwards`, so the
-base state is the finished state — if CSS animation never runs, the card
-still renders complete rather than blank.
+one idea. Elements that must survive a renderer without CSS animation use
+`animation-fill-mode: backwards`, so their base state is the finished state.
 
 Travelling pulses set `pathLength="100"` on every edge, so one shared keyframe
 drives 36 lines of different lengths.

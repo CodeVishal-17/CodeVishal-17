@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="190" viewBox="0 0 860 190" role="img" aria-labelledby="ht hd">
-  <title id="ht">Vishal — AI / ML engineer</title>
-  <desc id="hd">Title card: Vishal, machine learning engineer, LLM agents and RAG systems, AI infrastructure, open source contributor. Beside it, a small neural network with signals pulsing from input to output.</desc>
+  <title id="ht">Vishal - AI / ML engineer</title>
+  <desc id="hd">A profile card that boots: a progress bar fills to 100 percent, then reveals Vishal - machine learning engineer, LLM agents and RAG systems, AI infrastructure, open source contributor - beside a small neural network with signals pulsing from input to output.</desc>
   <defs>
     <clipPath id="card"><rect width="860" height="190" rx="14"/></clipPath>
     <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
@@ -24,28 +24,47 @@
     .kick { font-size: 12.5px; fill: #7d8590; letter-spacing: .12em; }
     .mark { font-size: 14px; }
     .role { font-size: 14px; fill: #adbac7; opacity: 0; }
-    .pulse { stroke: #58a6ff; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 18 82;
-             animation: flow 3.0s linear infinite; }
-    .core { animation: fire 3.0s ease-out infinite; }
 
-    @keyframes shimmer { 0% { transform: translateX(-260px); } 100% { transform: translateX(420px); } }
-    @keyframes cyc { 0%,2% { opacity:0; transform: translateY(7px); }
-                     6%,22% { opacity:1; transform: none; }
-                     26%,100% { opacity:0; transform: translateY(-7px); } }
-    @keyframes flow { 0% { stroke-dashoffset:118; opacity:0; } 8% { opacity:.95; }
-                      36% { stroke-dashoffset:0; opacity:.95; } 44% { opacity:0; }
-                      100% { stroke-dashoffset:0; opacity:0; } }
-    @keyframes fire { 0%,100% { opacity:.2; } 5% { opacity:1; } 30% { opacity:.2; } }
-    @keyframes rise { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform:none; } }
+    /* ---------------------------- boot phase ---------------------------- */
+    .boot   { animation: bootout .45s ease 2.15s forwards; }
+    .bcmd   { font-size: 12.5px; fill: #7d8590; letter-spacing: .1em; }
+    .fill   { transform-box: fill-box; transform-origin: left center; transform: scaleX(0);
+              animation: fill 1.9s linear .2s forwards; }
+    .pct    { font-size: 12px; fill: #58a6ff; opacity: 0;
+              animation-name: hold; animation-timing-function: linear; }
+    .st     { font-size: 11px; fill: #545d68; letter-spacing: .08em; opacity: 0;
+              animation-name: hold; animation-timing-function: linear; }
+    .ok     { fill: #58a6ff; }
+    .bootin { animation: soft .45s ease backwards; }
+
+    /* --------------------------- live content --------------------------- */
+    .content { opacity: 0; animation: reveal .65s cubic-bezier(.22,1,.36,1) 2.35s forwards; }
+    .pulse  { stroke: #58a6ff; stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 18 82;
+              opacity: 0; animation: flow 3.0s linear infinite; }
+    .core   { opacity: .2; animation: fire 3.0s ease-out infinite; }
+    .shine  { animation: shimmer 4.5s cubic-bezier(.5,0,.5,1) 3.60s infinite; }
+    .r0 { animation: cyc 13s ease-in-out 2.50s infinite; }
+    .r1 { animation: cyc 13s ease-in-out 5.75s infinite; }
+    .r2 { animation: cyc 13s ease-in-out 9.00s infinite; }
+    .r3 { animation: cyc 13s ease-in-out 12.25s infinite; }
+    .in   { animation: rise .7s cubic-bezier(.22,1,.36,1) 2.50s backwards; }
+    .rule { stroke-dasharray: 260; animation: drawline 1.3s cubic-bezier(.22,1,.36,1) 2.70s backwards; }
+
+    @keyframes hold     { 0%,100% { opacity: 1; } }
+    @keyframes fill     { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes bootout  { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes soft     { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes reveal   { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform:none; } }
+    @keyframes shimmer  { 0% { transform: translateX(-260px); } 100% { transform: translateX(420px); } }
+    @keyframes cyc      { 0%,2% { opacity:0; transform: translateY(7px); }
+                          6%,22% { opacity:1; transform: none; }
+                          26%,100% { opacity:0; transform: translateY(-7px); } }
+    @keyframes flow     { 0% { stroke-dashoffset:118; opacity:0; } 8% { opacity:.95; }
+                          36% { stroke-dashoffset:0; opacity:.95; } 44% { opacity:0; }
+                          100% { stroke-dashoffset:0; opacity:0; } }
+    @keyframes fire     { 0%,100% { opacity:.2; } 5% { opacity:1; } 30% { opacity:.2; } }
+    @keyframes rise     { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform:none; } }
     @keyframes drawline { from { stroke-dashoffset: 260; } to { stroke-dashoffset: 0; } }
-
-    .shine { animation: shimmer 4.5s cubic-bezier(.5,0,.5,1) 1.2s infinite; }
-    .r0 { animation: cyc 13s ease-in-out 0s    infinite; }
-    .r1 { animation: cyc 13s ease-in-out 3.25s infinite; }
-    .r2 { animation: cyc 13s ease-in-out 6.5s  infinite; }
-    .r3 { animation: cyc 13s ease-in-out 9.75s infinite; }
-    .in   { animation: rise .7s cubic-bezier(.22,1,.36,1) .1s backwards; }
-    .rule { stroke-dasharray: 260; animation: drawline 1.3s cubic-bezier(.22,1,.36,1) .3s backwards; }
   </style>
 
   <g clip-path="url(#card)">
@@ -53,107 +72,128 @@
     <rect width="860" height="190" fill="url(#dots)"/>
     <circle cx="700" cy="80" r="220" fill="url(#glow)"/>
 
-    <text class="mono kick in" x="44" y="46"><tspan fill="#58a6ff">$</tspan> whoami</text>
-
-    <g clip-path="url(#nameclip)">
-      <rect x="36" y="56" width="330" height="64" fill="url(#metal)"/>
-      <rect class="shine" x="36" y="56" width="180" height="64" fill="url(#sweep)"/>
+    <!-- =============================== boot =============================== -->
+    <g class="boot mono">
+      <text class="bcmd bootin" x="432" y="74" text-anchor="middle"><tspan fill="#58a6ff">$</tspan> ./init-profile</text>
+      <g class="bootin" style="animation-delay:.12s">
+        <rect x="280" y="92" width="260" height="6" rx="3" fill="#21262d"/>
+        <rect class="fill" x="280" y="92" width="260" height="6" rx="3" fill="#58a6ff"/>
+      </g>
+      <text class="pct" x="556" y="101" style="animation-delay:0.2s;animation-duration:0.3s">0%</text>
+      <text class="pct" x="556" y="101" style="animation-delay:0.5s;animation-duration:0.33s">24%</text>
+      <text class="pct" x="556" y="101" style="animation-delay:0.83s;animation-duration:0.33s">42%</text>
+      <text class="pct" x="556" y="101" style="animation-delay:1.16s;animation-duration:0.34s">59%</text>
+      <text class="pct" x="556" y="101" style="animation-delay:1.5s;animation-duration:0.33s">77%</text>
+      <text class="pct" x="556" y="101" style="animation-delay:1.83s;animation-duration:0.8s">100%</text>
+      <text class="st" x="432" y="122" text-anchor="middle" style="animation-delay:0.2s;animation-duration:0.7s">initializing</text>
+      <text class="st" x="432" y="122" text-anchor="middle" style="animation-delay:0.9s;animation-duration:0.65s">loading modules</text>
+      <text class="st ok" x="432" y="122" text-anchor="middle" style="animation-delay:1.55s;animation-duration:1.05s">ready</text>
     </g>
-    <line class="rule" x1="46" y1="124" x2="306" y2="124" stroke="#30363d" stroke-width="1.5"/>
 
-    <g class="mono">
-      <text class="mark" x="44" y="152" fill="#58a6ff">▸</text>
-    <text class="role r0" x="66" y="152">machine learning engineer</text>
-    <text class="role r1" x="66" y="152">llm agents &amp; rag systems</text>
-    <text class="role r2" x="66" y="152">ai infrastructure</text>
-    <text class="role r3" x="66" y="152">open source contributor</text>
+    <!-- ============================= content ============================== -->
+    <g class="content">
+      <text class="mono kick in" x="44" y="46"><tspan fill="#58a6ff">$</tspan> whoami</text>
+
+      <g clip-path="url(#nameclip)">
+        <rect x="36" y="56" width="330" height="64" fill="url(#metal)"/>
+        <rect class="shine" x="36" y="56" width="180" height="64" fill="url(#sweep)"/>
+      </g>
+      <line class="rule" x1="46" y1="124" x2="306" y2="124" stroke="#30363d" stroke-width="1.5"/>
+
+      <g class="mono">
+        <text class="mark" x="44" y="152" fill="#58a6ff">&#9656;</text>
+        <text class="role r0" x="66" y="152">machine learning engineer</text>
+        <text class="role r1" x="66" y="152">llm agents &amp; rag systems</text>
+        <text class="role r2" x="66" y="152">ai infrastructure</text>
+        <text class="role r3" x="66" y="152">open source contributor</text>
+      </g>
+
+      <line x1="540" y1="66" x2="630" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="57" style="animation-delay:2.60s"/>
+      <line x1="540" y1="66" x2="630" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="83" style="animation-delay:2.60s"/>
+      <line x1="540" y1="66" x2="630" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="109" style="animation-delay:2.60s"/>
+      <line x1="540" y1="66" x2="630" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="135" style="animation-delay:2.60s"/>
+      <line x1="540" y1="96" x2="630" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="57" style="animation-delay:2.60s"/>
+      <line x1="540" y1="96" x2="630" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="83" style="animation-delay:2.60s"/>
+      <line x1="540" y1="96" x2="630" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="109" style="animation-delay:2.60s"/>
+      <line x1="540" y1="96" x2="630" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="135" style="animation-delay:2.60s"/>
+      <line x1="540" y1="126" x2="630" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="57" style="animation-delay:2.60s"/>
+      <line x1="540" y1="126" x2="630" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="83" style="animation-delay:2.60s"/>
+      <line x1="540" y1="126" x2="630" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="109" style="animation-delay:2.60s"/>
+      <line x1="540" y1="126" x2="630" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="135" style="animation-delay:2.60s"/>
+      <line x1="630" y1="57" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="57" style="animation-delay:3.15s"/>
+      <line x1="630" y1="57" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="83" style="animation-delay:3.15s"/>
+      <line x1="630" y1="57" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="109" style="animation-delay:3.15s"/>
+      <line x1="630" y1="57" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="135" style="animation-delay:3.15s"/>
+      <line x1="630" y1="83" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="57" style="animation-delay:3.15s"/>
+      <line x1="630" y1="83" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="83" style="animation-delay:3.15s"/>
+      <line x1="630" y1="83" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="109" style="animation-delay:3.15s"/>
+      <line x1="630" y1="83" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="135" style="animation-delay:3.15s"/>
+      <line x1="630" y1="109" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="57" style="animation-delay:3.15s"/>
+      <line x1="630" y1="109" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="83" style="animation-delay:3.15s"/>
+      <line x1="630" y1="109" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="109" style="animation-delay:3.15s"/>
+      <line x1="630" y1="109" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="135" style="animation-delay:3.15s"/>
+      <line x1="630" y1="135" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="57" style="animation-delay:3.15s"/>
+      <line x1="630" y1="135" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="83" style="animation-delay:3.15s"/>
+      <line x1="630" y1="135" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="109" style="animation-delay:3.15s"/>
+      <line x1="630" y1="135" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="135" style="animation-delay:3.15s"/>
+      <line x1="720" y1="57" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="57" x2="810" y2="76" style="animation-delay:3.70s"/>
+      <line x1="720" y1="57" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="57" x2="810" y2="116" style="animation-delay:3.70s"/>
+      <line x1="720" y1="83" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="83" x2="810" y2="76" style="animation-delay:3.70s"/>
+      <line x1="720" y1="83" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="83" x2="810" y2="116" style="animation-delay:3.70s"/>
+      <line x1="720" y1="109" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="109" x2="810" y2="76" style="animation-delay:3.70s"/>
+      <line x1="720" y1="109" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="109" x2="810" y2="116" style="animation-delay:3.70s"/>
+      <line x1="720" y1="135" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="135" x2="810" y2="76" style="animation-delay:3.70s"/>
+      <line x1="720" y1="135" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
+      <line class="pulse" pathLength="100" x1="720" y1="135" x2="810" y2="116" style="animation-delay:3.70s"/>
+      <circle cx="540" cy="66" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="540" cy="66" r="2.6" fill="#58a6ff" style="animation-delay:2.60s"/>
+      <circle cx="540" cy="96" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="540" cy="96" r="2.6" fill="#58a6ff" style="animation-delay:2.60s"/>
+      <circle cx="540" cy="126" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="540" cy="126" r="2.6" fill="#58a6ff" style="animation-delay:2.60s"/>
+      <circle cx="630" cy="57" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="57" r="2.6" fill="#58a6ff" style="animation-delay:3.15s"/>
+      <circle cx="630" cy="83" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="83" r="2.6" fill="#58a6ff" style="animation-delay:3.15s"/>
+      <circle cx="630" cy="109" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="109" r="2.6" fill="#58a6ff" style="animation-delay:3.15s"/>
+      <circle cx="630" cy="135" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="135" r="2.6" fill="#58a6ff" style="animation-delay:3.15s"/>
+      <circle cx="720" cy="57" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="57" r="2.6" fill="#58a6ff" style="animation-delay:3.70s"/>
+      <circle cx="720" cy="83" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="83" r="2.6" fill="#58a6ff" style="animation-delay:3.70s"/>
+      <circle cx="720" cy="109" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="109" r="2.6" fill="#58a6ff" style="animation-delay:3.70s"/>
+      <circle cx="720" cy="135" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="135" r="2.6" fill="#58a6ff" style="animation-delay:3.70s"/>
+      <circle cx="810" cy="76" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="810" cy="76" r="2.6" fill="#58a6ff" style="animation-delay:4.25s"/>
+      <circle cx="810" cy="116" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="810" cy="116" r="2.6" fill="#58a6ff" style="animation-delay:4.25s"/>
     </g>
-
-    <line x1="540" y1="66" x2="630" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="57" style="animation-delay:0.00s"/>
-    <line x1="540" y1="66" x2="630" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="83" style="animation-delay:0.00s"/>
-    <line x1="540" y1="66" x2="630" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="109" style="animation-delay:0.00s"/>
-    <line x1="540" y1="66" x2="630" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="66" x2="630" y2="135" style="animation-delay:0.00s"/>
-    <line x1="540" y1="96" x2="630" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="57" style="animation-delay:0.00s"/>
-    <line x1="540" y1="96" x2="630" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="83" style="animation-delay:0.00s"/>
-    <line x1="540" y1="96" x2="630" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="109" style="animation-delay:0.00s"/>
-    <line x1="540" y1="96" x2="630" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="96" x2="630" y2="135" style="animation-delay:0.00s"/>
-    <line x1="540" y1="126" x2="630" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="57" style="animation-delay:0.00s"/>
-    <line x1="540" y1="126" x2="630" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="83" style="animation-delay:0.00s"/>
-    <line x1="540" y1="126" x2="630" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="109" style="animation-delay:0.00s"/>
-    <line x1="540" y1="126" x2="630" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="540" y1="126" x2="630" y2="135" style="animation-delay:0.00s"/>
-    <line x1="630" y1="57" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="57" style="animation-delay:0.55s"/>
-    <line x1="630" y1="57" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="83" style="animation-delay:0.55s"/>
-    <line x1="630" y1="57" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="109" style="animation-delay:0.55s"/>
-    <line x1="630" y1="57" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="57" x2="720" y2="135" style="animation-delay:0.55s"/>
-    <line x1="630" y1="83" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="57" style="animation-delay:0.55s"/>
-    <line x1="630" y1="83" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="83" style="animation-delay:0.55s"/>
-    <line x1="630" y1="83" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="109" style="animation-delay:0.55s"/>
-    <line x1="630" y1="83" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="83" x2="720" y2="135" style="animation-delay:0.55s"/>
-    <line x1="630" y1="109" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="57" style="animation-delay:0.55s"/>
-    <line x1="630" y1="109" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="83" style="animation-delay:0.55s"/>
-    <line x1="630" y1="109" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="109" style="animation-delay:0.55s"/>
-    <line x1="630" y1="109" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="109" x2="720" y2="135" style="animation-delay:0.55s"/>
-    <line x1="630" y1="135" x2="720" y2="57" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="57" style="animation-delay:0.55s"/>
-    <line x1="630" y1="135" x2="720" y2="83" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="83" style="animation-delay:0.55s"/>
-    <line x1="630" y1="135" x2="720" y2="109" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="109" style="animation-delay:0.55s"/>
-    <line x1="630" y1="135" x2="720" y2="135" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="630" y1="135" x2="720" y2="135" style="animation-delay:0.55s"/>
-    <line x1="720" y1="57" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="57" x2="810" y2="76" style="animation-delay:1.10s"/>
-    <line x1="720" y1="57" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="57" x2="810" y2="116" style="animation-delay:1.10s"/>
-    <line x1="720" y1="83" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="83" x2="810" y2="76" style="animation-delay:1.10s"/>
-    <line x1="720" y1="83" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="83" x2="810" y2="116" style="animation-delay:1.10s"/>
-    <line x1="720" y1="109" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="109" x2="810" y2="76" style="animation-delay:1.10s"/>
-    <line x1="720" y1="109" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="109" x2="810" y2="116" style="animation-delay:1.10s"/>
-    <line x1="720" y1="135" x2="810" y2="76" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="135" x2="810" y2="76" style="animation-delay:1.10s"/>
-    <line x1="720" y1="135" x2="810" y2="116" stroke="#212b36" stroke-width="1"/>
-    <line class="pulse" pathLength="100" x1="720" y1="135" x2="810" y2="116" style="animation-delay:1.10s"/>
-    <circle cx="540" cy="66" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="540" cy="66" r="2.6" fill="#58a6ff" style="animation-delay:0.00s"/>
-    <circle cx="540" cy="96" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="540" cy="96" r="2.6" fill="#58a6ff" style="animation-delay:0.00s"/>
-    <circle cx="540" cy="126" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="540" cy="126" r="2.6" fill="#58a6ff" style="animation-delay:0.00s"/>
-    <circle cx="630" cy="57" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="57" r="2.6" fill="#58a6ff" style="animation-delay:0.55s"/>
-    <circle cx="630" cy="83" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="83" r="2.6" fill="#58a6ff" style="animation-delay:0.55s"/>
-    <circle cx="630" cy="109" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="109" r="2.6" fill="#58a6ff" style="animation-delay:0.55s"/>
-    <circle cx="630" cy="135" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="630" cy="135" r="2.6" fill="#58a6ff" style="animation-delay:0.55s"/>
-    <circle cx="720" cy="57" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="57" r="2.6" fill="#58a6ff" style="animation-delay:1.10s"/>
-    <circle cx="720" cy="83" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="83" r="2.6" fill="#58a6ff" style="animation-delay:1.10s"/>
-    <circle cx="720" cy="109" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="109" r="2.6" fill="#58a6ff" style="animation-delay:1.10s"/>
-    <circle cx="720" cy="135" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="720" cy="135" r="2.6" fill="#58a6ff" style="animation-delay:1.10s"/>
-    <circle cx="810" cy="76" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="810" cy="76" r="2.6" fill="#58a6ff" style="animation-delay:1.65s"/>
-    <circle cx="810" cy="116" r="5.5" fill="#0d1117" stroke="#30363d" stroke-width="1.1"/><circle class="core" cx="810" cy="116" r="2.6" fill="#58a6ff" style="animation-delay:1.65s"/>
   </g>
   <rect x=".5" y=".5" width="859" height="189" rx="14" fill="none" stroke="#21262d"/>
 </svg>
