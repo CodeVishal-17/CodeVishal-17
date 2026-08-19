@@ -6,6 +6,8 @@
 <a href="https://www.linkedin.com/in/vishal-goyal-906837303/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
 <a href="mailto:goyalvishal7711@gmail.com"><b>Email</b></a>
 
+<img src="https://komarev.com/ghpvc/?username=CodeVishal-17&color=58a6ff&style=flat-square&label=profile+views" alt="Profile views"/>
+
 </div>
 
 <br/>
@@ -22,9 +24,20 @@ Early in my career, and I'd rather say that plainly than pad it. No job titles y
 | Developer tools | Data structures & algorithms | Computer vision |
 | Research-style experiments | AI systems design | AI infrastructure |
 
+## GitHub
+
+<div align="center">
+
+<img height="170" src="https://awesome-github-stats.azurewebsites.net/user-stats/CodeVishal-17?theme=github-dark&cardType=octocat&preferLogin=false&Background=0D1117&Border=21262D" alt="GitHub stats for CodeVishal-17: total commits, pull requests, issues and repositories contributed to."/>
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=CodeVishal-17&background=0D1117&border=21262D&stroke=21262D&ring=58A6FF&fire=58A6FF&currStreakNum=E6EDF3&currStreakLabel=58A6FF&sideNums=E6EDF3&sideLabels=7D8590&dates=545D68" alt="Contribution streak: total contributions, current streak and longest streak."/>
+
+<img width="860" src="https://github-readme-activity-graph.vercel.app/graph?username=CodeVishal-17&bg_color=0d1117&color=e6edf3&title_color=58a6ff&line=58a6ff&point=58a6ff&area=true&area_color=58a6ff&border_color=21262d&custom_title=Contributions%20-%20last%2031%20days&radius=8" alt="Contribution activity over the last 31 days."/>
+
+</div>
+
 ## Open source
 
-Where the work happens — listed by ecosystem, not by counters. The graph above this README is the real record.
+Where the work happens — the projects themselves, not a PR tally.
 
 | Ecosystem | Domain |
 | :-- | :-- |
@@ -75,4 +88,4 @@ Open to collaboration, open-source work, and conversations about ML systems.
 <a href="https://www.linkedin.com/in/vishal-goyal-906837303/">LinkedIn</a> &nbsp;·&nbsp;
 <a href="https://github.com/CodeVishal-17">GitHub</a>
 
-<sub>No streak counters, no trophy shelf, no invented metrics.</sub>
+<sub>Counters above come straight from the GitHub API. Everything else here is something I built or somewhere I contributed.</sub>

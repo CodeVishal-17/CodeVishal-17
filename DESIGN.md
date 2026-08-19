@@ -52,9 +52,30 @@ margins on both sides.
 Monospace advance widths vary by platform (≈0.55–0.62em). Text is laid out
 against the 0.62em worst case so nothing overflows.
 
+## Stat cards
+
+Three third-party services, all themed to the palette above so they read as
+one system with the header:
+
+| Card | Service | Params that matter |
+| :-- | :-- | :-- |
+| Stats | `awesome-github-stats.azurewebsites.net` | `Background=0D1117&Border=21262D` — the `github-dark` theme alone renders `#1e2228`, which is visibly lighter than the rest |
+| Streak | `github-readme-streak-stats.herokuapp.com` | full hex override: `ring`/`fire` = accent, `sideLabels` = secondary |
+| Activity | `github-readme-activity-graph.vercel.app` | `bg_color`, `line`, `area_color`, `border_color` |
+
+Two services that most profiles use are **dead** and were deliberately left
+out rather than shipped as broken images:
+
+- `github-readme-stats.vercel.app` — `DEPLOYMENT_PAUSED` (this also kills the
+  usual Top Languages card; there is no working public instance)
+- `github-profile-trophy.vercel.app` — `DEPLOYMENT_DISABLED`
+
+If they come back, or you self-host `github-readme-stats` on your own Vercel,
+they drop straight in.
+
 ## Content rules
 
-- No fabricated metrics — no streak counters, star totals or trophies.
-- No dead links. A project with no public repo gets no link.
+- Counters come from the GitHub API. Nothing decorative, nothing invented.
+- No dead links, and no embeds pointing at a service that is down.
 - Honest status words: `Active`, `Experimental`, `Built`, `In progress`.
 - Emphasis is earned: bold marks the tools actually reached for first.
