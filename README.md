@@ -2,6 +2,7 @@
 
 <img src="./assets/header.svg" width="860" alt="Vishal — AI / ML engineer. Machine learning, LLM agents and RAG systems, AI infrastructure, open source."/>
 
+<a href="https://portfolio-beta-eight-faznv8dgr8.vercel.app/"><b>Portfolio</b></a> &nbsp;·&nbsp;
 <a href="https://github.com/CodeVishal-17"><b>GitHub</b></a> &nbsp;·&nbsp;
 <a href="https://www.linkedin.com/in/vishal-goyal-906837303/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
 <a href="mailto:goyalvishal7711@gmail.com"><b>Email</b></a>
@@ -29,7 +30,7 @@ Early in my career, and I'd rather say that plainly than pad it. No job titles y
 <div align="center">
 
 <img height="170" src="https://awesome-github-stats.azurewebsites.net/user-stats/CodeVishal-17?theme=github-dark&cardType=octocat&preferLogin=false&Background=0D1117&Border=21262D" alt="GitHub stats for CodeVishal-17: total commits, pull requests, issues and repositories contributed to."/>
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=CodeVishal-17&background=0D1117&border=21262D&stroke=21262D&ring=58A6FF&fire=58A6FF&currStreakNum=E6EDF3&currStreakLabel=58A6FF&sideNums=E6EDF3&sideLabels=7D8590&dates=545D68" alt="Contribution streak: total contributions, current streak and longest streak."/>
+<img height="170" src="https://streak-stats.demolab.com/?user=CodeVishal-17&background=0D1117&border=21262D&stroke=21262D&ring=58A6FF&fire=58A6FF&currStreakNum=E6EDF3&currStreakLabel=58A6FF&sideNums=E6EDF3&sideLabels=7D8590&dates=545D68" alt="Contribution streak: total contributions, current streak and longest streak."/>
 
 <img width="860" src="https://github-readme-activity-graph.vercel.app/graph?username=CodeVishal-17&bg_color=0d1117&color=e6edf3&title_color=58a6ff&line=58a6ff&point=58a6ff&area=true&area_color=58a6ff&border_color=21262d&custom_title=Contributions%20-%20last%2031%20days&radius=8" alt="Contribution activity over the last 31 days."/>
 
@@ -84,6 +85,7 @@ Bold is what I reach for first.
 
 Open to collaboration, open-source work, and conversations about ML systems.
 
+<a href="https://portfolio-beta-eight-faznv8dgr8.vercel.app/">portfolio</a> &nbsp;·&nbsp;
 <a href="mailto:goyalvishal7711@gmail.com">goyalvishal7711@gmail.com</a> &nbsp;·&nbsp;
 <a href="https://www.linkedin.com/in/vishal-goyal-906837303/">LinkedIn</a> &nbsp;·&nbsp;
 <a href="https://github.com/CodeVishal-17">GitHub</a>
