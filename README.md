@@ -51,21 +51,7 @@ Where the work happens — the projects themselves, not a PR tally.
 | [Django](https://github.com/django/django) | The Python web framework for perfectionists |
 | [Google etils](https://github.com/google/etils) | Shared Python tooling used across Google |
 
-## Building
 
-**Axon** — knowledge infrastructure that tries to stay true. Most internal AI tools are a chat box bolted onto a vector store: the moment the code moves, they answer confidently and wrongly, and nothing in the system knows it has gone stale. Axon models knowledge as atomic, attributable claims instead of loose embeddings, then continuously checks those claims against their sources. Drift detection flags knowledge whose source changed underneath it.
-
-`ingest → extract claims → map → detect drift → maintain truth`
-
-`Python` `FastAPI` `PostgreSQL` `pgvector` `Next.js` `TypeScript` — **Active**. A concept under development, not a released product.
-
-**Also built**
-
-- **Email Agent Environment** — email as an explicit task / state / action environment, so every step of an agent's reasoning is inspectable instead of one long prompt and a hope. `Experimental`
-- **Resource Management System** — academic material lives across a dozen group chats; this puts it behind one searchable schema. `Built`
-- **Sundarone** — a café & resort platform built as a real application: typed content layer, installable, fast on a weak connection. `In progress`
-
-<sub>Repo links are omitted where the code isn't public yet — a dead link is worse than none.</sub>
 
 ## Stack
 
